@@ -1,0 +1,52 @@
+	expdp utility schemas=VC0764XX5SUBASH DIRECTORY=U05_DUMPS dumpfile=VC0764XX5SUBASH_nvscrubp11_06102016_%U.dmp LOGFILE=VC0764XX5SUBASH_nvscrubp11_06102016.Log compression=all  PARALLEL=4
+
+	-- push
+	scp /u05/dumps/VC0764XX5SUBASH_nvscrubp11_06102016_*.dmp oracle@nvopsimpd1.d2hawkeye.net:/u05/dumps
+
+	-- pull
+	scp nvscrubp11:/u05/dumps/VC0764XX5SUBASH_nvscrubp11_06102016_*.dmp `pwd`
+
+	SELECT bytes/(1024*1024*1024), a.* FROM dba_data_files a WHERE tablespace_name LIKE '%VC0764XX5SUBASH%'    
+
+	SELECT 'select '''||owner||''' ,'''||table_name||''',count(*) from '||owner||'.'||table_name||' union all ' from dba_tables WHERE owner='HI0229001'
+ 
+	impdp utility schemas=VC0764XX5SUBASH DIRECTORY=U05_DUMPS dumpfile=VC0764XX5SUBASH_nvscrubp11_06102016_%U.dmp LOGFILE=VC0764XX5SUBASH_nvscrubp11_06102016.Log   PARALLEL=4 
+
+	----------------------------//		REMAP EXPDP		//-----------------------------------
+
+	expdp utility schemas=VC0704007160500 DIRECTORY=U05_DUMPS dumpfile=VC0704007160500_NVSCRUBP3_08052016.dmp LOGFILE=VC0704007160500_NVSCRUBP3_08052016.Log compression=all 
+
+	scp /u05/dumps/VC0704007160500_NVSCRUBP3_08052016.dmp oracle@nvscrubstgp2.d2hawkeye.net:/u05/dumps
+
+	scp nvscrubp3:/u05/dumps/VC0704007160500_NVSCRUBP3_08052016.dmp `pwd`
+
+	impdp utility DIRECTORY=U05_DUMPS dumpfile=VC0704007160500_NVSCRUBP3_08052016.dmp LOGFILE=VC0704007160500_NVSCRUBP3_08052016.Log  REMAP_SCHEMA=VC0704007160500:VC0802XXXKESHAB REMAP_TABLESPACE=VC0704007160500:VC0802XXXKESHAB  
+
+	------------------------------//   to get the sql of ddl //--------------------------------------
+
+	expdp utility/oracle schemas=HF0279001140520 DIRECTORY=DATAPUMP	dumpfile=HF0279001140520_06242016.dmp logfile=HF0279001140520_06242016_log.log	compression=ALL
+
+	(enter AS : sys AS sysdba)
+	impdp DIRECTORY=DATAPUMP dumpfile=HF0279001140520_06242016.dmp sqlfile=script_HF0279001140520.sql INCLUDE=TABLE
+
+	-----------------------------//import just contents//----------------------
+
+	expdp utility schemas=HI0300001 DIRECTORY=U05_DUMPS dumpfile=HI0300001_nvopsimpd1_07252016.dmp LOGFILE=HI0300001_nvopsimpd1_07252016.Log content=metadata_only include=PROCEDURE,PACKAGE
+
+	impdp utility schemas=HI0300001 DIRECTORY=U05_DUMPS dumpfile=HI0300001_nvopsimpd1_07252016.dmp LOGFILE=HI0300001_nvopsimpd1_07252016.Log content=metadata_only include=PROCEDURE,PACKAGE
+
+	------------------------// network link //---------------------------------
+
+	expdp utility schemas=HI0764001 DIRECTORY=U05_DUMPS dumpfile=HI0764001_nvscrubp11_09142016_%U.dmp LOGFILE=HI0764001_nvscrubp11_09142016.Log NETWORK_LINK=NVSCRUBP11 compression=all  PARALLEL=4
+	
+	impdp utility schemas=HI0764001 DIRECTORY=U05_DUMPS dumpfile=HI0764001_nvscrubp11_09142016_%U.dmp LOGFILE=HI0764001_nvscrubp11_09142016.Log   PARALLEL=4 
+
+OR
+
+ impdp utility schemas=VC0022FINALCDF3 DIRECTORY=U05_DUMPS LOGFILE=VC0022FINALCDF3_nvscrubstgp2_09232016.Log NETWORK_LINK=nvscrubp1 PARALLEL=4
+
+	------------------------//  just tablespace //---------------------------------
+  
+ 	expdp utility DIRECTORY=U05_DUMPS dumpfile=HP0090002170202_NVSQLP1_03292017_%U.dmp LOGFILE=HP0090002170202_NVSQLP1_03292017.Log compression=all   PARALLEL=4    tablespaces=HP0090002170202
+
+	impdp utility  tablespaces=HP0090002170202 DIRECTORY=DIR_U05 dumpfile=HP0090002170202_NVSQLP1_03292017_%U.dmp LOGFILE=HP0090002170202_NVSQLP1_03292017.Log   

@@ -1,0 +1,25 @@
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','aivanovska@vendavo.com'   ,'Project Delivery','STRIPaivanovska@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','aivanovska@vendavo.com'   ,'Project Delivery','STRIPaivanovska@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','aristevski@vendavo.com'   ,'Project Delivery','STRIParistevski@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','avelkoski@vendavo.com'     ,'Project Delivery','STRIPavelkoski@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','bkostovski@vendavo.com'   ,'Project Delivery','STRIPbkostovski@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','bmuseski@vendavo.com'     ,'Project Delivery','STRIPbmuseski@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','dpopov@vendavo.com'    ,'Project Delivery','STRIPdpopov@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','ejasharovski@vendavo.com' ,'Project Delivery','STRIPejasharovski@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','emanchovska@vendavo.com'  ,'Project Delivery','STRIPemanchovska@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','fdimovski@vendavo.com'    ,'Project Delivery','STRIPfdimovski@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','gchuchukovski@vendavo.com','Project Delivery','STRIPgchuchukovski@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','imicev@vendavo.com'       ,'Project Delivery','STRIPimicev@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','Jcvetkoska@vendavo.com'   ,'Project Delivery','STRIPJcvetkoska@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','kpetrovikj@vendavo.com'   ,'Project Delivery','STRIPkpetrovikj@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','mpushev@vendavo.com'      ,'Project Delivery','STRIPmpushev@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','rpavlov@vendavo.com'      ,'Project Delivery','STRIPrpavlov@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','skaranfilovski@vendavo.com','Project Delivery','STRIPskaranfilovski@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','smitrovska@vendavo.com'   ,'Project Delivery','STRIPsmitrovska@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','spcvetkovska@vendavo.com' ,'Project Delivery','STRIPspcvetkovska@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','spetrovska@vendavo.com'   ,'Project Delivery','STRIPspetrovska@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','sserafimova@vendavo.com'   ,'Project Delivery','STRIPsserafimova@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','tspasovska@vendavo.com'   ,'Project Delivery','STRIPtspasovska@vendavo.com');
+INSERT INTO `UserRole`(`pkey`, `VendavoId`, `Role`, urp ) VALUES ('STRIP','bmjurukovska@vendavo.com'  ,'Project Delivery','STRIPbmjurukovska@vendavo.com');
+
+INSERT INTO `Jira_OpenAir`.`Projects` (`id`, `Client_Company_name`, `Internal_Id_Client`, `Project_Name`, `Internal_Id_Project`, `Phase_Task`, `Internal_Id_Task`, `Project_Delivery_Option`, `Owner`, `Epic`, `project_key`, `pr`) VALUES (NULL, 'Dynapac Compaction Equipment AB', '884', 'Dynapac migration - VPP (T&M)', '505', 'Project Manager', '5989', 'T&M', 'Rantalaiho, Henri', 'DYM', 'DYM', 'DYMDYM'), (NULL, 'Outotec Oyj', '943', 'Outotec Inbound Integration - VPP (T&M)', '521', 'Project Manager', '6000', 'T&M', 'Aerikkala, Kalle', 'OUTOTEC', 'OUTOTEC', 'OUTOTECOUTOTEC');

@@ -1,0 +1,1 @@
+select text from syscomments where text like '%CREATE TRIGGER%'
